@@ -1,0 +1,109 @@
+@font-face {
+	font-family: 'Simplifica';
+	src: url('Simplifica.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Existence';
+	src: url('Existence-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	font-family: Existence;
+	margin: 0;
+	color: #fff;
+}
+.page {
+	width: 100%;
+	height: 100%;
+}
+.scroller_container {
+	position: fixed;
+	width: 20px;
+	height: 100%;
+	right: 0;
+	top: 0;
+	display: flex;
+}
+.scroller_container>.scroller {
+	margin-top: auto;
+	margin-bottom: auto;
+	width: 100%;
+	color: #000;
+}
+.scroller_container>.scroller>.scroll_point:before {
+	content: "";
+	width: 12px;
+	height: 12px;
+	margin: 4px;
+	border-radius: 50%;
+	background-color: #fff;
+	display: inline-block;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+}
+.scroller_container>.scroller>.scroll_point.selected:before {
+	background-color: #000;
+}
+.arrow_container {
+	position: absolute;
+	bottom: 30px;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+}
+.arrow_container:hover {
+	bottom: 10px;
+}
+.arrow_container:hover .arrow_text {
+	margin-bottom: 20px;
+}
+.arrow_container .arrow_text {
+	font-size: 28px;
+	text-transform: uppercase;
+	text-align: center;
+	transition: all .2s ease-in-out;
+}
+.arrow_container>.arrow {
+	background-image: url(arrow-down.png);
+	background-size: auto 100px;
+	width: 200px;
+	height: 60px;
+	background-position: center center;
+}
+.content {
+	margin: 15px 10%;
+	font-size: 22px;
+}
+#page1 {
+	background-image: url(bg.jpg);//https://wallpapershome.com/space/night-sky-night-city-earth-sky-stars-clouds-light-height-421.html
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+}
+div.title {
+	font-size: 96px;
+	text-transform: uppercase;
+	text-align: center;
+}
+#page2 {
+	background-color: #6ac5a9;
+	color: #333;
+}
+#page3 {
+	background-color: #333;
+	color: #6ac5a9;
+}
+@media (max-width: 890px) {
+	div.title {
+		font-size: 68px;
+	}
+	.content {
+		font-size: 16px;
+	}
+}
